@@ -6,7 +6,7 @@ element-wrapper
 [![Downloads][downloads-image]][downloads-url]
 [![js-standard-style][standard-image]][standard-url]
 
-A simple and safe way to set innerHTML for yo-yo or bel component.
+A simple and safe way to set innerHTML for [yo-yo](https://github.com/maxogden/yo-yo) or [bel](https://github.com/shama/bel) component.
 
 ### Intall
 
