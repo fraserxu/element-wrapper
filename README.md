@@ -20,14 +20,17 @@ $ npm i element-wrapper
 var yo = require('yo-yo')
 var sanitizeHtml = require('sanitize-html')
 
-module.exports = function (source) {
+module.exports = function elementWrapper (source, opts) {
+  opts = opts || {}
+
   // create an empty container
   var container = document.createElement('span')
   // use innerHTML to set the content
-  container.innerHTML = sanitizeHtml(source)
+  container.innerHTML = sanitizeHtml(source, opts)
 
   return yo`${container}`
 }
+
 ```
 
 ### API
@@ -42,10 +45,14 @@ Please check [sanitize-html](https://www.npmjs.com/package/sanitize-html) for av
 
 ```JavaScript
 var yo = require('yo-yo')
-var elementWrapper = require('element-wrapper')
+var elementWrapper = require('../index.js')
 
-var htmlString = '<div>dangerously set html</div>'
-var app = yo`${elementWrapper(htmlString)}`
+var htmlString = '<div class="danger">xx dangerously set html</div>'
+var app = yo`${elementWrapper(htmlString, {
+  allowedAttributes: {
+    '*': ['class']
+  }
+})}`
 
 document.body.appendChild(app)
 ```
