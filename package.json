@@ -1,6 +1,6 @@
 {
   "name": "element-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple and safe way to set innerHTML for yo-yo or bel component.",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "yo-yo": "^1.1.1"
   },
   "devDependencies": {
+    "browserify": "^13.0.0",
     "electron-prebuilt": "^0.37.2",
     "standard": "^6.0.8",
     "tape": "^4.5.1",
